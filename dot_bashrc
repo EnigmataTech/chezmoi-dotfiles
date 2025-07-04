@@ -159,6 +159,7 @@ if [[ "$TERM" == "xterm" ]]; then
     # Append to PROMPT_COMMAND to call precmd before displaying the prompt
     PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND; }precmd"
 fi
+export PATH="$PATH:/home/enigma/.local/bin"
 eval "$(mise activate bash)"
-
+eval "$(starship init bash)"
 set -o vi
